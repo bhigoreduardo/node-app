@@ -1,0 +1,17 @@
+@server = http://localhost:8080
+@endPoint = users
+@userId = 6483deb1749a941f2df5ebcd
+
+### GET /
+GET {{ server }}/{{ endPoint }}/ HTTP/1.1
+
+### PATCH /:id
+PATCH {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Alterado dnv dnv"
+}
+
+### DELETE /:id
+DELETE {{ server }}/{{ endPoint }}/{{ userId }} HTTP/1.1
