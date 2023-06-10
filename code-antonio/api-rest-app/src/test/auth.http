@@ -1,0 +1,21 @@
+@server = http://localhost:8080
+@endPoint = auth
+
+### POST /register
+POST {{ server }}/{{ endPoint }}/register HTTP/1.1
+content-type: application/json
+
+{
+    "email": "fakeemail@email.com",
+    "username": "Fake Username",
+    "password": "fakepass"
+}
+
+### POST /login
+POST {{ server }}/{{ endPoint }}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "fakeemail@email.com",
+    "password": "fakepass"
+}
